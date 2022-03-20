@@ -1,9 +1,14 @@
-import { people, products } from './mock-data'
+import CurrentUserLoader from './CurrentUserLoader'
+import UserInfo from './UserInfo'
 
 function App() {
+
   return (
     <>
       <h1>Container Components</h1>
+      <CurrentUserLoader>
+        <UserInfo />
+      </CurrentUserLoader>
     </>
   );
 }
