@@ -5,6 +5,7 @@ import RegularList from './components/RegularList'
 import NumberedList from './components/NumberedList'
 import { SmallPersonListItem, LargePersonListItem } from './people'
 import { SmallProductsListItem, LargeProductsListItem } from './products'
+import Modal from './components/Modal'
 
 const LeftHandComponent = ({ name }) => {
   return <h1 style={{background: 'green'}}>{name}</h1>
@@ -16,6 +17,20 @@ const RightHandComponent = ({ message }) => {
 function App() {
   return (
     <>
+      <Modal>
+        <RegularList
+          items={products}
+          resourceName={"product"}
+          itemComponent={SmallProductsListItem}
+        />
+        <br />
+        <NumberedList
+          items={products}
+          resourceName={"product"}
+          itemComponent={LargeProductsListItem}
+        />
+      </Modal>
+      <br />
       <SplitScreen leftWeight={1} rightWeight={5}>
         <LeftHandComponent name="Junting" />
         <RightHandComponent message="Developer" />
