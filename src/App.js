@@ -11,6 +11,12 @@ const getServerData = url => async () => {
   return response.data
 }
 
+const getLocalStorageData = key => () => {
+  return localStorage.getItem(key);
+}
+
+const Text = ({message}) => <p>{message}</p>
+
 function App() {
   return (
     <>
@@ -30,6 +36,10 @@ function App() {
       <h3>DataSource</h3>
       <DataSource getDataFunc={getServerData("/users/125")} resourceName="user">
         <UserInfo/>
+      </DataSource>
+      <h3>DataSource from localStorage</h3>
+      <DataSource getDataFunc={getLocalStorageData("message")} resourceName="message">
+        <Text />
       </DataSource>
     </>
   );
