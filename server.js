@@ -11,7 +11,6 @@ app.get('/current-user', (req, res) => {
 
 app.get('/users/:id', (req, res) => {
   const { id } = req.params;
-
   res.json(users.find(user => user.id === id))
 })
 
