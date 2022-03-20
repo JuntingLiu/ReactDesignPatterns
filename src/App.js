@@ -1,4 +1,3 @@
-import './App.css';
 import { people, products } from './mock-data'
 
 function App() {
