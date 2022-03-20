@@ -1,6 +1,8 @@
 import UserInfo from './UserInfo'
 import CurrentUserLoader from './CurrentUserLoader'
 import UserLoader from './UserLoader'
+import ResourceLoader from './ResourceLoader'
+import ProductInfo from './ProductInfo'
 
 function App() {
 
@@ -8,13 +10,17 @@ function App() {
     <>
       <h1>Container Components</h1>
       <h2>CurrentUserLoader</h2>
-      <CurrentUserLoader>
+      <ResourceLoader resourceUrl={"/current-user"} resourceName={"user"}>
         <UserInfo />
-      </CurrentUserLoader>
+      </ResourceLoader>
       <h2>UserLoader</h2>
-      <UserLoader userId="123">
+      <ResourceLoader resourceUrl={"/users/123"} resourceName={"user"}>
         <UserInfo />
-      </UserLoader>
+      </ResourceLoader>
+      <h2>ResourceLoader</h2>
+      <ResourceLoader resourceUrl={"/products/1"} resourceName={"product"}>
+        <ProductInfo />
+      </ResourceLoader>
     </>
   );
 }
