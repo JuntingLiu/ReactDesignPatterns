@@ -19,3 +19,12 @@
 ```shell
 npx nodemon --exec npx babel-node server.js
 ```
+
+* CurrentLoader
+* UserLoader
+* ResourceLoader
+* DataSource => 数据加载容器，请求函数由外部传递，展示内容组件也由外部传递，只负责数据的加载。
+
+## Controlled vs Uncontrolled Components
+
+受控组件与非受控组件。
