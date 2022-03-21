@@ -28,3 +28,15 @@ npx nodemon --exec npx babel-node server.js
 ## Controlled vs Uncontrolled Components
 
 受控组件与非受控组件。
+
+## Higher-Order Components (HOCs)
+
+高阶组件是返回另一个组件的组件。
+
+```js
+MyComponent ----> <h1>I'm JSX!</h1>
+
+HOC ----> SomeComponent ----> <h1>I'm JSX!</h1>
+```
+
+高阶组件就是一个函数，被视为某种组件工厂函数，调用这些函数来创建新组件。使用高阶组件就是为了可以在几个组件之间共享行为。
