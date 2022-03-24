@@ -1,8 +1,9 @@
 import React from 'react'
-import useCurrentUser from './useCurrentUser'
+// import useCurrentUser from './useCurrentUser'
+import useUser from './useUser'
 
 const UserInfo = () => {
-  const user = useCurrentUser();
+  const user = useUser('124');
   const { name, age, hairColor, hobbies } = user || {}
 
   return user ? (
