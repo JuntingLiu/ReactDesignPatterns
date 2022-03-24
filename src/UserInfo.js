@@ -1,9 +1,10 @@
 import React from 'react'
 // import useCurrentUser from './useCurrentUser'
-import useUser from './useUser'
+// import useUser from './useUser'
+import useResource from './useResource'
 
-const UserInfo = () => {
-  const user = useUser('124');
+const UserInfo = ({userId}) => {
+  const user = useResource(`/users/${userId}`);
   const { name, age, hairColor, hobbies } = user || {}
 
   return user ? (
