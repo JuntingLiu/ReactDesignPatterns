@@ -1,10 +1,15 @@
 import React from 'react'
+import axios from 'axios'
 // import useCurrentUser from './useCurrentUser'
 // import useUser from './useUser'
-import useResource from './useResource'
+// import useResource from './useResource'
+import useDataResource from './useDataResource'
 
 const UserInfo = ({userId}) => {
-  const user = useResource(`/users/${userId}`);
+  const user = useDataResource(async () => {
+    const response  = await axios.get(`/users/${userId}`)
+    return response.data
+  });
   const { name, age, hairColor, hobbies } = user || {}
 
   return user ? (
