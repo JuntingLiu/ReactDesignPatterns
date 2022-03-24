@@ -1,7 +1,7 @@
 import React from 'react'
-import withEditTableUser from './withEditTableUser'
+import withEditableUser from './withEditableUser'
 
-const UserInfoForm = withEditTableUser(({ user, onChangeUser, onSaveUser, onResetUser }) => {
+const UserInfoForm = withEditableUser(({ user, onChangeUser, onSaveUser, onResetUser }) => {
   const { name, age, hairColor } = user || {}
 
   return user ? (

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 
-const withEditTableUser = (Component, userId) => {
+const withEditableUser = (Component, userId) => {
   return props => {
     const [originalUser, setOriginalUser] = useState(null)
     const [user, setUser] = useState(null)
@@ -41,4 +41,4 @@ const withEditTableUser = (Component, userId) => {
   }
 }
 
-export default withEditTableUser
+export default withEditableUser
