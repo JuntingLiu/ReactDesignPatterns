@@ -1,6 +1,8 @@
 import React from 'react'
+import useCurrentUser from './useCurrentUser'
 
-const UserInfo = ({ user }) => {
+const UserInfo = () => {
+  const user = useCurrentUser();
   const { name, age, hairColor, hobbies } = user || {}
 
   return user ? (
