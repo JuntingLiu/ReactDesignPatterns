@@ -1,7 +1,8 @@
 import React from 'react'
-import withEditableUser from './withEditableUser';
+// import withEditableUser from './withEditableUser';
+import withEditableResource from './withEditableResource'
 
-const UserInfoForm = withEditableUser(({ user, onChangeUser, onSaveUser, onResetUser }) => {
+const UserInfoForm = withEditableResource(({ user, onChangeUser, onSaveUser, onResetUser }) => {
   const { name, age, hairColor } = user || {}
 
   return user ? (
@@ -23,6 +24,6 @@ const UserInfoForm = withEditableUser(({ user, onChangeUser, onSaveUser, onReset
     </form>
   ) : <p>loading...</p>
 
-}, '123')
+}, '/users/123', 'user')
 
 export default UserInfoForm
