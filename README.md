@@ -42,3 +42,17 @@ HOC ----> SomeComponent ----> <h1>I'm JSX!</h1>
 高阶组件就是一个函数，被视为某种组件工厂函数，调用这些函数来创建新组件。使用高阶组件就是为了可以在几个组件之间共享行为。
 
 ## Custom Hooks
+
+
+## Functional Programming (FP)
+
+函数式编程。
+
+在 React 中函数式编程的一些最常见的应用：
+
+* Controlled components
+* Function components
+* Higher-order components
+* Recursive components （递归组件）
+* Partially applied components (部分应用组件, 偏函数组件)
+* Component composition (组合组件)
